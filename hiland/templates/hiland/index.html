@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>Michelle Hiland</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/js/fancybox/jquery.fancybox.css" rel="stylesheet" />
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--contact form scripts -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
+  <!-- <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>-->
+   <!--<script src="http://malsup.github.com/jquery.form.js"></script>-->
+   <!--<script src="//code.jquery.com/jquery-1.9.1.js"></script>-->
+   <!--<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>-->
+
+
+   <!-- <script>
+	//validate contact form
+	$(document).ready(function(){
+	   // $("#submit").click(function(){
+                    rules:
+                    {
+                        firstname:
+                        {
+                            required: true,
+                            minlength: 2
+                        },
+                        lastname:
+                        {
+                            required: true,
+                            minlength: 2
+                        },
+                        email:
+                        {
+                            required: true,
+                            email: true,
+                        },
+                        message:
+                        {
+                            required:true,
+                            minlength: 2
+                        }
+                     },
+                     messages:
+                     {
+                        firstname:
+                        {
+                            required: "Please enter your first name"
+                        },
+                        lastname:
+                        {
+                            required: "Please enter your last name"
+                        },
+                        email:
+                     	   {
+                            required: "Please enter your email address."
+                        },
+                        message:
+                        {
+                            required: "Please enter a message."
+                        }
+                    },
+		    if (!$('#form_contact').valid()) {
+                             return false;
+                    }  
+		    else{
+		    submitHandler: function(ev, form) {
+			var d =  $("#form_contact").serialize();
+			$.ajax({
+			    url: '/assets/php/index.php',
+                            type: 'POST',
+                            dataType: 'JSON',
+                            data: d,
+                            success: function(data) {
+                            //$('#form_contact').hide();
+                            $("#thanks").text("Thank you for your message. I will get back to you shortly.");
+                            $("#form_contact")[0].reset(); // To reset form fields on success.
+				//return false;
+			    }
+			    error:function(data){
+                            alert("failure");
+			    log.console(data);
+			    }
+			});
+			 ev.preventDefault(); 
+	             }
+	    	}	
+	});
+	//});
+    })
+
+    </script>-->
+ <!--   <script>
+	$(document).ready(function(){
+    	   $("#submit").click(function(){
+		    var d =  $("#form_contact").serialize();
+		    $.ajax({
+			    url: '/assets/php/index.php',
+        	     	    type: 'POST',
+        	    	    dataType: 'text',
+        	     	    data: d,
+        	     	    success: function(data) {
+			    //$('#form_contact').hide();
+		            $("#thanks").text("Thank you for your message. I will get back to you shortly.");
+			    $("#form_contact")[0].reset(); // To reset form fields on success.
+                       		return false;
+                     	    } 
+    	 	      });
+			return false;
+	   }); 
+    });
+</script>-->
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+		
+	<!-- Menu -->
+	<nav class="menu" id="theMenu">
+		<div class="menu-wrap">
+			<h1 class="logo"><a href="index.html#home">Michelle Hiland</a></h1>
+			<i class="fa fa-times menu-close"></i>
+			<a href="#home" class	="smoothScroll">Home</a>
+			<a href="#about" class="smoothScroll">About</a>
+			<a href="#portfolio" class="smoothScroll">Portfolio</a>
+			<a href="#services" class="smoothScroll">Services</a>
+			<a href="#contact" class="smoothScroll">Contact</a>
+			<a href="https://www.facebook.com/michelleahiland"><i class="fa fa-facebook"></i></a>
+			<a href="https://www.linkedin.com/pub/michelle-a-hiland/41/bba/21b"><i class="fa fa-linkedin"></i></a>
+			<a href="https://www.pinterest.com/mhiland/"><i class="fa fa-pinterest"></i></a>
+			<a href="https://instagram.com/michellehiland/"><i class="fa fa-instagram"></i></a>
+			<a href="http://mountainskater.tumblr.com/"><i class="fa fa-tumblr-square"></i></a>
+		</div>
+		
+		<!-- Menu button -->
+		<div id="menuToggle"><i class="fa fa-bars"></i></div>
+	</nav>
+
+	<section id="home" name="home"></section>
+	<div id="headerwrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<h1>Michelle Hiland</h1>
+					<!--<h4 class="title">Website Designer, Developer & Social Media Specialist <h4>-->
+
+				</div>
+			</div><! --/row -->
+		</div><! --/container -->
+	</div><! --/headerwrap -->
+	
+	<section id="about" name="about"></section>
+	<div id="aboutwrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 name">
+					<img class="img-responsive" src="assets/img/professional.jpg">
+					<p>Michelle Hiland</p>
+					<div class="name-label"></div>
+				</div><! --/col-lg-4-->
+				<div class="col-lg-8 name-desc">
+					<h2>TALENTED DESIGNER & <br/>FRONT-END DEVELOPER & <br/>SOCIAL MEDIA MANAGER</h2>
+					<div class="name-zig"></div>
+					
+					<div class="col-md-6">
+						<p>I am a young professional with a background in Operation & Information Technology Management from the University of Colorado at Boulder. My busniss degree gives me a unique insight into the challenges and solutions faced by businesses and an understanding of how processes work. I am determined, hard-working, enthusiastic and a true go-getter. </p>
+						<p> As a data specialist for 2 years I have been able to provide value to companies by analyzing data to find key indicators of success as well as discovering inefficiencies and creating long term solutions through reports and projects. As a graphic designer I have assisted start-ups and non-profits in gaining an online presence and enjoy creating modern attractive websites. I have created infographics, logos, photos and managed various social media platforms as well.</p> 					
+					</div>
+					<div class="col-md-6">
+						<img class="img-responsive" src="assets/img/bearlake.jpg">
+						<p> When I am not working I am enjoying the outdoors in beautiful Colorado. I love trail running and have a passion for the challenge and thrill of running up any mountain I encounter. I also enjoy mountain biking, skiing, ice skating on alpine lakes and photography. If not enjoying an adventure outside I can be found at a coffee shop learning new treands and technologies to continually enhance my skill set.
+						</p>
+					</div>
+					
+				</div><! --/col-lg-8-->
+		
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /aboutwrap -->
+	
+	<! -- ABOUT SEPARATOR -->
+	<div class="sep about" data-stellar-background-ratio="0.5"></div>
+	
+	<! -- PORTFOLIO SECTION -->
+	<section id="portfolio" name="portfolio"></section>
+	<div id="portfoliowrap">
+		<div class="container">
+			<div class="row">
+				<h1>SOME OF MY LATEST WORKS</h1>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+					<div class="project-wrapper">
+	                    <div class="project">
+	                        <div class="photo-wrapper">
+	                            <div class="photo">
+	                            	<a class="fancybox" href="assets/img/portfolio/Sex-Trafficking-House-fb.jpg"><img class="img-responsive" src="assets/img/portfolio/trafficking.jpg" alt=""></a>
+	                            </div>
+	                            <div class="overlay"></div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div><!-- col-lg-4 -->
+				
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+					<div class="project-wrapper">
+	                    <div class="project">
+	                        <div class="photo-wrapper">
+	                            <div class="photo">
+	                            	<a class="fancybox" href="assets/img/portfolio/Muscle_key.jpg"><img class="img-responsive" src="assets/img/portfolio/muscle2.jpg" alt=""></a>
+	                            </div>
+	                            <div class="overlay"></div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div><!-- col-lg-4 -->
+				
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+					<div class="project-wrapper">
+	                    <div class="project">
+	                        <div class="photo-wrapper">
+	                            <div class="photo">
+	                            	<a class="fancybox" href="assets/img/portfolio/Exposure_Triangle.jpg"><img class="img-responsive" src="assets/img/portfolio/camera2.jpg" alt=""></a>
+	                            </div>
+	                            <div class="overlay"></div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div><!-- col-lg-4 -->
+			</div><!-- /row -->
+	
+			<div class="row mt">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+					<div class="project-wrapper">
+	                    <div class="project">
+	                        <div class="photo-wrapper">
+	                            <div class="photo">
+	                            	<a class="fancybox" href="assets/img/portfolio/amyshouse2.jpg"><img class="img-responsive" src="assets/img/portfolio/amyshouse.jpg" alt=""></a>
+	                            </div>
+	                            <div class="overlay"></div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div><!-- col-lg-4 -->
+				
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+					<div class="project-wrapper">
+	                    <div class="project">
+	                        <div class="photo-wrapper">
+	                            <div class="photo">
+	                            	<a class="fancybox" href="assets/img/portfolio/earth2.jpg"><img class="img-responsive" src="assets/img/portfolio/earth.jpg" alt=""></a>
+	                            </div>
+
+
+
+	                            <div class="overlay"></div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div><!-- col-lg-4 -->
+				
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+					<div class="project-wrapper">
+	                    <div class="project">
+	                        <div class="photo-wrapper">
+	                            <div class="photo">
+	                            	<a class="fancybox" href="assets/img/portfolio/port03.jpg"><img class="img-responsive" src="assets/img/portfolio/port03.jpg" alt=""></a>
+	                            </div>
+	                            <div class="overlay"></div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div><!-- col-lg-4 -->
+			</div><!-- /row -->
+		</div><! --/container -->
+		<div class="container">
+			<div class="row mt centered">
+				<h1>MY DESIGN PROCESS</h1>
+				<div class="col-lg-4 proc">
+					<i class="fa fa-coffee"></i>
+					<h3>The Meeting</h3>
+					<p>Let's get together and discuss your needs. This is a time for us to bring our ideas to one place to get your concepts for your website and/or social media campaign made into a reality.</p>
+				</div>
+				<div class="col-lg-4 proc">
+					<i class="fa fa-cogs"></i>
+					<h3>The Ideas</h3>
+					<p>I will provide you with the blueprint of your services with the content you have provided me and will give you a chance to provide feedback to make your website and/or social media strategy tailored to you.</p>
+				</div>
+				<div class="col-lg-4 proc">
+					<i class="fa fa-heart"></i>
+					<h3>The Product</h3>
+					<p>You will have a modern dynamic website for your company and/or a social media campaign in place to promote and maintain your business.</p>
+				</div>
+				
+			</div><! --/row -->
+		</div><! --/container -->
+	</div><! --/Portfoliowrap -->
+
+	<! -- PORTFOLIO SEPARATOR -->
+	<div class="sep portfolio" data-stellar-background-ratio="0.5"></div>
+	
+	
+	<! -- SERVICE SECTION -->
+	<section id="services" name="services"></section>
+	<div id="servicewrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4-offset-2 centered">
+					<h1>AN OVERVIEW OF MY SERVICES</h1>
+					<h3>I'll do all the hardwork for you</h3>
+					<p>Pick one or all of my services and let me help you.</p>
+				</div><!-- /col-lg-6 -->
+			</div><! --/row -->
+			
+			<div class="row mt">
+				<div class="col-lg-4 service">
+					<i class="fa fa-star"></i><p>Social Media Strategy<br/><small>Digital Presence</small></p>
+					<p class="text">Execute and manage online presence in all social media platforms.
+					 Proficeincy in Facebook, Twitter, Instagram, Pinterest, Google+, LinkedIn and YouTube.</p>
+				</div>
+				<!--<div class="col-lg-3 service">
+					<i class="fa fa-cloud"></i><p>Social Media Strategy<br/><small>Digital Presence</small></p>
+					<p class="text"></p>
+				</div>-->
+				<div class="col-lg-4 service">
+					<i class="fa fa-filter"></i><p>Social Media Analytics<br/><small>Insights & Reports</small></p>
+					<p class="text"> Monitor and analyze effective benchmarks for measuring the impact of social media programs
+					 and report on effectiveness of campaigns in an effort to maximize results.</p>
+				</div>
+				<div class="col-lg-4 service">
+					<i class="fa fa-search"></i><p>SEO Campaign<br/><small>Online Search Presence</small></p>
+					<p class="text">Launch and create SEO campaign to attempt to improve rankings in major search engines.
+					Will provide optimal keywords and placement and SEO performance reports.</p>
+				</div>
+			</div><! --/row -->
+			<div class="row mt">
+				<div class="col-lg-4 service">
+					<i class="fa fa-pencil-square"></i><p>Website Design<br/><small>User Experience</small></p>
+					<p class="text"> Design and implement site layout to create a unique user experience.
+				         Proficeincy in HTML, CSS, Javascript, and Adobe Design Sutie.
+					</p>
+				</div>
+				<div class="col-lg-4 service">
+					<i class="fa fa-globe"></i><p>Website Development<br/><small>User Interface</small></p>
+					<p class="text">Development of the user interface and functionality. Website mantaintenace as needed.
+					 Proficiency in PHP, Python, C, and MySQL.</p>
+				</div>
+				<div class="col-lg-4 service">
+					<i class="fa fa-cloud"></i><p>Cloud Computing<br/><small>Worldwide Web</small></p>
+					<p class="text">Manage your cloud computing from start-ups to large enterprises. Proficient in AWS Services including EC2 instances, Apache, Route 53, S3.</p>
+				</div>
+				<!--<div class="col-lg-3 service">
+					<i class="fa fa-thumbs-up"></i><p>Database Solutions<br/><small>Data Analysis</small></p>
+					<p class="text"></p>
+				</div>-->
+			</div><! --/row -->
+			
+		</div><! --/container -->
+	</div><! --/servicewrap -->
+	
+	<!--<div id="testimonials">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 mt">
+				
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">-->
+					  <!-- Wrapper for slides -->
+					  <!--<div class="carousel-inner">
+					    <div class="item active mb centered">
+					      <h3>MARK WEBBER</h3>
+					      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					      <p><img class="img-circle" src="assets/img/pic-t1.jpg" width="80"></p>
+					    </div>
+
+					    <div class="item mb centered">
+					      <h3>PAUL LEVINGSTON</h3>
+					      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					      <p><img class="img-circle" src="assets/img/pic-t2.jpg" width="80"></p>
+					    </div>
+
+					    <div class="item mb centered">
+					      <h3>LUCY LENNIN</h3>
+					      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					      <p><img class="img-circle" src="assets/img/pic-t3.jpg" width="80"></p>
+					    </div>
+
+					  </div> -->
+					  <!-- Indicators -->
+					  <!--<ol class="carousel-indicators">
+					    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					  </ol>
+					</div> -->
+					  
+				<!--</div> --><! --/col-lg-8 -->
+			<!--</div>--><! --/row -->
+		<!--</div>--><! --/container -->
+	<!--</div>--><! --/testimonials -->
+	
+	<! -- SERVICE SECTION -->
+	<section id="contact" name="contact"></section>
+	<! -- CONTACT SEPARATOR -->
+	<div class="sep contact" data-stellar-background-ratio="0.5"></div>
+	
+	<div id="contactwrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<h1 class="contactfont">CONTACT ME TODAY!</h1>
+					
+					<p>
+						<small>Give me a shout if you have any questions, <br/>comments or want to request a service.
+						<br/>
+						
+					</p>
+					<br/>
+					<p>
+					  <a href="https://www.facebook.com/michelleahiland"><i id="social" class="fa fa-facebook-square fa-3x"></i></a>
+					  <a href="https://www.linkedin.com/pub/michelle-a-hiland/41/bba/21b"><i id="social" class="fa fa-linkedin-square fa-3x"></i></a>
+					  <a href="https://www.pinterest.com/mhiland/"><i  id="social"class="fa fa-pinterest-square fa-3x"></i></a>
+					  <a href="https://instagram.com/michellehiland/"><i id="social" class="fa fa-instagram fa-3x"></i></a>
+					  <a href="http://mountainskater.tumblr.com/"><i class="fa fa-tumblr-square fa-3x"></i></a>
+					</p>
+			
+				</div>
+				<div class="col-lg-6">
+				     <form id="form_contact" name="contact">
+                                         <div class="form-group">
+                                             <label for="firstname">Your First Name<span class="required">*</span></label>
+                                             <input class="form-control" type="text" id="firstname" name="firstname" placeholder="Enter your first name" minlength="2" required>
+					     <label for="lastname">Your Last Name<span class="required">*</span></label>
+                                             <input class="form-control" type="text" id="lastname" name="lastname" placeholder="Enter your last name" minlength="2" required>
+                                             <label for="email">Email address<span class="required">*</span></label>
+                                             <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                                             <label for="message">Message<span class="required">*</span></label>
+                                             <textarea class="form-control" name="message" id ="message" rows="4" placeholder="Enter a message" required></textarea>
+					    <!--<label for="answer" id="answer">What household animal says</label>"<i>meow?</i>"<span class="required">*</span>
+                                             <input type="text" class="form-control" id="answer" name="answer" placeholder="Enter answer" value="" required="">-->
+					  <!-- <span id="submit" name="submit" class="btn btn-default">Submit</span>-->
+					    <!-- <div id="thank_form" calss="form-control">
+                                                 <h4 id="thanks" class="thanks_form"> </h4>
+                                             </div>-->
+					    <input id="submit" class="btn btn-default" type="submit" value="Submit"/>
+				     </form>
+					<div id="thank_form" calss="form-control">
+                                                 <h4 id="thanks" class="thanks_form"> </h4>
+                                             </div>
+                                </div>
+			
+			</div><! --/row -->
+		</div><!-- /container -->
+	</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="assets/js/classie.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/jquery.stellar.min.js"></script>
+	<script src="assets/js/fancybox/jquery.fancybox.js"></script>    
+	<script src="assets/js/main.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script>
+		$(function(){
+			$.stellar({
+				horizontalScrolling: false,
+				verticalOffset: 40
+			});
+		});
+		</script>
+		
+		<script type="text/javascript">
+      $(function() {
+        //    fancybox
+          jQuery(".fancybox").fancybox();
+      });
+
+    </script>
+	<script>
+        //validate contact form
+        $(document).ready(function(){
+                    rules:
+                    {
+                        firstname:
+                        {
+                            required: true,
+                            minlength: 2
+                        },
+                        lastname:
+                        {
+                            required: true,
+                            minlength: 2
+                        },
+                        email:
+                        {
+                            required: true,
+                            email: true,
+                        },
+                        message:
+                        {
+                            required:true,
+                            minlength: 2
+                        }
+                     },
+                     messages:
+                     {
+                        firstname:
+                        {
+                            required: "Please enter your first name"
+                        },
+                        lastname:
+                        {
+                            required: "Please enter your last name"
+                        },
+                        email:
+                           {
+                            required: "Please enter your email address."
+                        },
+                        message:
+                        {
+                            required: "Please enter a message."
+                        }
+                    },
+                    if (!$('#form_contact').valid()) {
+                             return false;
+                    }
+	});
+	</script>
+		<script>
+        $(document).ready(function(){
+           $("#submit").click(function(){
+                    var d =  $("#form_contact").serialize();
+                    $.ajax({
+                            url: '/assets/php/index.php',
+                            type: 'POST',
+                            dataType: 'text',
+                            data: d,
+                            success: function(data) {
+                            //$('#form_contact').hide();
+                            $("#thanks").text("Thank you for your message. I will get back to you shortly.");
+                            $("#form_contact")[0].reset(); // To reset form fields on success.
+                                return false;
+                            } 
+                      });
+                        return false;
+           }); 
+    });
+		</script>
+    </body>
+</html>
